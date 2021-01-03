@@ -73,38 +73,38 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/首页',
     children: [
       {
-        path: 'dashboard',
+        path: 'index',
         component: () => import('@/views/dashboard/index'),
-        name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        name: 'Index',
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   },
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/documentation/index'),
+  //       name: 'Documentation',
+  //       meta: { title: 'Documentation', icon: 'documentation', affix: true }
+  //     }
+  //   ]
+  // },
   {
-    path: '/documentation',
+    path: '/notice',
     component: Layout,
+    redirect: '/notice/index',
     children: [
       {
         path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
-      }
-    ]
-  },
-  {
-    path: '/guide',
-    component: Layout,
-    redirect: '/guide/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/guide/index'),
-        name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
+        component: () => import('@/views/notice/index'),
+        name: 'Notice',
+        meta: { title: '通知', icon: 'guide', noCache: true }
       }
     ]
   },
@@ -172,14 +172,14 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/icon',
+    path: '/examine',
     component: Layout,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/icons/index'),
-        name: 'Icons',
-        meta: { title: 'Icons', icon: 'icon', noCache: true }
+        component: () => import('@/views/examine/index'),
+        name: 'Examine',
+        meta: { title: '审核', icon: 'clipboard', noCache: true }
       }
     ]
   },
